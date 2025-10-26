@@ -1,0 +1,31 @@
+### GET request to example server
+
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+POST http://localhost:8080/tricol_app_war_exploded/api/v1/fournisseurs
+Content-Type: application/json; charset=utf-8
+Accept: application/json
+
+{
+  "societe": "ACME Supplies",
+  "adress": "123 Market St",
+  "contact": "contact@acme.example",
+  "email": "for@for.com",
+  "telephone": "+1-555-0100",
+  "ville": "rabat",
+  "ice": "AA45GH45CF78"
+}
+{
+  "societe": "ACME Supplies",
+  "adress": "123 Market St",
+  "contact": "contact@acme.example",
+  "email": "for@for.com",
+  "telephone": "+1-555-0100",
+  "ville": "rabat",
+  "ice": "AA45GH45CF78"
+}
+
+###

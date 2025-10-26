@@ -4,7 +4,10 @@ package com.tricol.controller;
 import com.tricol.model.Fournisseur;
 import com.tricol.service.FournisseurService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Optional;

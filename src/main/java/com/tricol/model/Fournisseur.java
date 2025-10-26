@@ -15,7 +15,7 @@ public class Fournisseur {
     @NotBlank
     private String societe;
 
-    private String adresse;
+    private String addresse;
     private String contact;
 
     @Email
@@ -27,10 +27,10 @@ public class Fournisseur {
 
 
     public Fournisseur() {}
-    public Fournisseur(String societe, String adresse, String contact,
+    public Fournisseur(String societe, String addresse, String contact,
                        String email, String telephone, String ville, String ice) {
         this.societe = societe;
-        this.adresse = adresse;
+        this.addresse = addresse;
         this.contact = contact;
         this.email = email;
         this.telephone = telephone;
@@ -45,8 +45,8 @@ public class Fournisseur {
     public String getSociete() { return societe; }
     public void setSociete(String societe) { this.societe = societe; }
 
-    public String getAdresse() { return adresse; }
-    public void setAdresse(String adresse) { this.adresse = adresse; }
+    public String getaddresse() { return addresse; }
+    public void setaddresse(String addresse) { this.addresse = addresse; }
 
     public String getContact() { return contact; }
     public void setContact(String contact) { this.contact = contact; }

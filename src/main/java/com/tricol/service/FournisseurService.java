@@ -28,7 +28,7 @@ public class FournisseurService {
        if (fournisseur1.isPresent()){
            fournisseur_find=fournisseur1.get();
        }
-       fournisseur_find.setAdresse(fournisseur.getAdresse());
+       fournisseur_find.setaddresse(fournisseur.getaddresse());
        fournisseur_find.setContact(fournisseur.getContact());
        fournisseur_find.setEmail(fournisseur.getEmail());
        fournisseur_find.setIce(fournisseur.getIce());
