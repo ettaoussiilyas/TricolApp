@@ -27,7 +27,7 @@ public class JpaConfig {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/tricol_db?useSSL=false&serverTimezone=UTC");
         dataSource.setUsername("root");
-        dataSource.setPassword("adiladil123");
+        dataSource.setPassword("");
         return dataSource;
     }
 
