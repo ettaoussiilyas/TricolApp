@@ -32,12 +32,12 @@ GET http://localhost:8080/tricol_app_war_exploded/api/v1/fournisseurs/1
 
 ### Update Fournisseur By Id
 
-PUT http://localhost:8080/tricol_app_war_exploded/api/v1/fournisseurs/1
+PUT http://localhost:8080/tricol_app_war_exploded/api/v1/fournisseurs/2
 Content-Type: application/json; charset=utf-8
 Accept: application/json
 
 {
-  "societe": "ACME Update",
+  "societe": "ACME Updates",
   "address": "123 Market Update",
   "contact": "App 48 rue 122",
   "email": "update@update.com",

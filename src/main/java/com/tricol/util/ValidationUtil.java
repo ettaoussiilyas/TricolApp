@@ -10,6 +10,6 @@ public class ValidationUtil {
     }
     
     public boolean isValidICE(String ice) {
-        return ice != null && ice.length() >= 15;
+        return ice != null && ice.length() <= 15;
     }
 }
