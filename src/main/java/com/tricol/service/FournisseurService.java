@@ -2,17 +2,26 @@ package com.tricol.service;
 
 import com.tricol.model.Fournisseur;
 import com.tricol.repository.FournisseurRepository;
+import com.tricol.util.ValidationUtil;
+import com.tricol.util.LoggingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Service
 public class FournisseurService {
     @Autowired
     private FournisseurRepository fournisseurRepository;
+    
+    @Autowired
+    private ValidationUtil validationUtil;
+    
+    @Autowired
+    private LoggingUtil loggingUtil;
 
     public List<Fournisseur> getAllFournisseus() {
         return fournisseurRepository.findAll();
@@ -50,7 +59,20 @@ public class FournisseurService {
 
     }
 
-    public  Fournisseur addFournisseur(Fournisseur fournisseur){
+    public Fournisseur addFournisseur(Fournisseur fournisseur){
+        // Using beans from different configuration types
+        loggingUtil.logInfo("Adding new fournisseur: " + fournisseur.getSociete());
+        
+        if (!validationUtil.isValidEmail(fournisseur.getEmail())) {
+            loggingUtil.logError("Invalid email format");
+            throw new IllegalArgumentException("Invalid email format");
+        }
+        
+        if (!validationUtil.isValidICE(fournisseur.getIce())) {
+            loggingUtil.logError("Invalid ICE format");
+            throw new IllegalArgumentException("Invalid ICE format");
+        }
+        
         return fournisseurRepository.save(fournisseur);
     }
 }
